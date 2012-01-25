@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Search text:</b>
+  <%= @beermap.search_text %>
+</p>
+
+<p>
+  <b>Phone no:</b>
+  <%= @beermap.phone_no %>
+</p>
+
+<p>
+  <b>Message:</b>
+  <%= @beermap.message %>
+</p>
+
+<p>
+  <b>Connect:</b>
+  <%= @beermap.connect %>
+</p>
+
+<p>
+  <b>Fackbook friend:</b>
+  <%= @beermap.fackbook_friend %>
+</p>
+
+<p>
+  <b>Extra:</b>
+  <%= @beermap.extra %>
+</p>
+
+
+<%= link_to 'Edit', edit_beermap_path(@beermap) %> |
+<%= link_to 'Back', beermaps_path %>

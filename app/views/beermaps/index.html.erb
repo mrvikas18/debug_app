@@ -1,0 +1,33 @@
+<h1>Listing beermaps</h1>
+
+<table>
+  <tr>
+    <th>Search text</th>
+    <th>Phone no</th>
+    <th>Message</th>
+    <th>Connect</th>
+    <th>Fackbook friend</th>
+    <th>Extra</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @beermaps.each do |beermap| %>
+  <tr>
+    <td><%= beermap.search_text %></td>
+    <td><%= beermap.phone_no %></td>
+    <td><%= beermap.message %></td>
+    <td><%= beermap.connect %></td>
+    <td><%= beermap.fackbook_friend %></td>
+    <td><%= beermap.extra %></td>
+    <td><%= link_to 'Show', beermap %></td>
+    <td><%= link_to 'Edit', edit_beermap_path(beermap) %></td>
+    <td><%= link_to 'Destroy', beermap, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Beermap', new_beermap_path %>

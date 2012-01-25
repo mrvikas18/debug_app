@@ -1,0 +1,41 @@
+<%= form_for(@beermap) do |f| %>
+  <% if @beermap.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@beermap.errors.count, "error") %> prohibited this beermap from being saved:</h2>
+
+      <ul>
+      <% @beermap.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :search_text %><br />
+    <%= f.text_field :search_text %>
+  </div>
+  <div class="field">
+    <%= f.label :phone_no %><br />
+    <%= f.text_field :phone_no %>
+  </div>
+  <div class="field">
+    <%= f.label :message %><br />
+    <%= f.text_field :message %>
+  </div>
+  <div class="field">
+    <%= f.label :connect %><br />
+    <%= f.text_field :connect %>
+  </div>
+  <div class="field">
+    <%= f.label :fackbook_friend %><br />
+    <%= f.text_field :fackbook_friend %>
+  </div>
+  <div class="field">
+    <%= f.label :extra %><br />
+    <%= f.text_field :extra %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
