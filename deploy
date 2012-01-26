@@ -1,0 +1,16 @@
+cd C:/rail_projects/debug_app;
+bundle install; bin/rake db:migrate --trace;
+cd $h;
+bundle exec annotate -p after -e Tests,Fixtures;
+git add app; git add spec;git add public; git add global_utils;git add db/migrate; git add config;
+git add app/\*.*; git add spec/\*.*;git add public/\*.*; git add global_utils/\*.*;
+git add db/schema.rb;
+git add db/migrate/\*.*; git add config/\*.*;
+git add vendor;
+git add vendor\*.*;
+git add bin/annotate;
+echo "Starting commit (local and then push to github) with message: "$1
+git commit -a -m "$1";
+git push -f origin master;
+echo "Enter y and press RETURN to deploy to github, Heroku and run the rails+testsuite locally.  Press Ctrl+C to abort."; read var1; git push -f heroku master;heroku run rake db:migrate --trace;heroku restart;
+git push origin master
