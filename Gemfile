@@ -10,6 +10,8 @@ gem 'will_paginate', '3.0.pre2'
 gem 'devise'
 gem 'bcrypt-ruby'
 
+gem 'nokogiri'
+
 gem 'validates_timeliness', '~> 3.0.2'
 #adding support for omniauth in devise (two gems)
 gem 'hashie'
