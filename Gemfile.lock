@@ -36,9 +36,10 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.2.0)
-    devise (1.5.3)
+    devise (2.0.0)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.0.3)
+      railties (~> 3.1)
       warden (~> 1.1)
     diff-lcs (1.1.3)
     dragonfly (0.9.10)
@@ -182,6 +183,7 @@ DEPENDENCIES
   gmail
   hashie
   jquery-rails
+  nokogiri
   omniauth
   pg
   rack-cache
