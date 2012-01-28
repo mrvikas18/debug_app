@@ -12,6 +12,10 @@ gem 'bcrypt-ruby'
 
 gem 'nokogiri'
 
+gem 'beer_mapping'
+
+gem 'hpricot'
+
 gem 'validates_timeliness', '~> 3.0.2'
 #adding support for omniauth in devise (two gems)
 gem 'hashie'
@@ -27,6 +31,8 @@ end
 # Adding Dragonfly for image upload
 gem 'fog' , '~> 1.1.1'
 gem 'excon', '~> 0.9.4'
+
+gem 'newrelic_rpm' 
 
 gem 'rack-cache', :require => 'rack/cache'
 gem 'dragonfly', '~>0.9.9'

@@ -28,6 +28,7 @@ GEM
     annotate (2.4.1.beta1)
     arel (2.2.1)
     bcrypt-ruby (3.0.1-x86-mingw32)
+    beer_mapping (0.0.1)
     builder (3.0.0)
     coffee-rails (3.1.1)
       coffee-script (>= 2.2.0)
@@ -67,6 +68,7 @@ GEM
       oauth (>= 0.3.6)
     hashie (1.2.0)
     hike (1.2.1)
+    hpricot (0.8.6)
     i18n (0.6.0)
     jquery-rails (1.0.19)
       railties (~> 3.0)
@@ -82,6 +84,7 @@ GEM
     net-scp (1.0.4)
       net-ssh (>= 1.99.1)
     net-ssh (2.3.0)
+    newrelic_rpm (3.3.1)
     nokogiri (1.5.0-x86-mingw32)
     oauth (0.4.5)
     omniauth (1.0.2)
@@ -163,7 +166,7 @@ GEM
     win32-api (1.4.8-x86-mingw32)
     win32-process (0.6.5)
       windows-pr (>= 1.1.2)
-    windows-api (0.4.0)
+    windows-api (0.4.1)
       win32-api (>= 1.4.5)
     windows-pr (1.2.1)
       win32-api (>= 1.4.5)
@@ -175,6 +178,7 @@ PLATFORMS
 DEPENDENCIES
   annotate (~> 2.4.1.beta)
   bcrypt-ruby
+  beer_mapping
   coffee-rails (~> 3.1.1)
   devise
   dragonfly (~> 0.9.9)
@@ -182,7 +186,9 @@ DEPENDENCIES
   fog (~> 1.1.1)
   gmail
   hashie
+  hpricot
   jquery-rails
+  newrelic_rpm
   nokogiri
   omniauth
   pg

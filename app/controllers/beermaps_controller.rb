@@ -1,3 +1,5 @@
+require 'beer_mapping'
+
 class BeermapsController < ApplicationController
   # GET /beermaps
   # GET /beermaps.json
@@ -8,6 +10,30 @@ class BeermapsController < ApplicationController
       format.html # index.html.erb
       format.json { render json: @beermaps }
     end
+    
+    beer = BeerMapping::API.new("a3969e3048c0f68d28fc1e7930a27067")
+beer.find_by_location("chicago") # OR beer.find_by_name("Pub Name")
+
+beer.locations.each do |location|
+  # Standard data
+  puts location.name # Pub name
+  puts location.city
+  puts location.state
+
+  # Geo Data
+  puts location.geo.lng # Geo lontitude
+  puts location.geo.lat # Geo Latitude
+
+  # Rating Data
+  puts location.ratings.service
+  puts location.ratings.selection
+  puts location.ratings.overall
+
+  # Related Images
+  location.images.each do |image|
+
+  end
+end
   end
 
   # GET /beermaps/1
