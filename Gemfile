@@ -34,6 +34,8 @@ gem 'excon', '~> 0.9.4'
 
 gem 'newrelic_rpm' 
 
+gem 'twilio-ruby' 
+
 gem 'rack-cache', :require => 'rack/cache'
 gem 'dragonfly', '~>0.9.9'
 

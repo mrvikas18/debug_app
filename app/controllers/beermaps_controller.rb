@@ -1,5 +1,5 @@
 require 'beer_mapping'
-
+require 'twilio-ruby'
 class BeermapsController < ApplicationController
   # GET /beermaps
   # GET /beermaps.json
@@ -12,7 +12,7 @@ class BeermapsController < ApplicationController
     end
     
     beer = BeerMapping::API.new("a3969e3048c0f68d28fc1e7930a27067")
-beer.find_by_location("chicago") # OR beer.find_by_name("Pub Name")
+beer.find_by_name("ddee") # OR beer.find_by_name("Pub Name")
 
 beer.locations.each do |location|
   # Standard data
@@ -34,6 +34,22 @@ beer.locations.each do |location|
 
   end
 end
+
+# put your own credentials here
+account_sid = 'AC31ffdb1a182e4458bc4ba498abe5a36a'
+auth_token = 'ff8e6fc947fb411e18869d5bae57131a'
+
+# set up a client to talk to the Twilio REST API
+@client = Twilio::REST::Client.new account_sid, auth_token
+
+@client.account.sms.messages.create(
+  :from => '+14155992671',
+  :to => '+17037894438',
+  :body => 'Hey there!'
+)  
+
+
+
   end
 
   # GET /beermaps/1
